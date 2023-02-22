@@ -9,7 +9,7 @@ Takes a byte array or hex value as the `data` argument.
 ```ts
 import { walletClient } from '.'
  
-const message = await walletClient.signMessage({ // [!code focus:99]
+const signature = await walletClient.signMessage({ // [!code focus:99]
   from: '0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266',
   data: '0xdeadbeaf',
 })
@@ -31,7 +31,7 @@ The signed message.
 Address to use for signing.
 
 ```ts
-const message = await walletClient.signMessage({
+const signature = await walletClient.signMessage({
   from: '0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266', // [!code focus:1]
   data: '0xdeadbeaf',
 })
@@ -44,7 +44,7 @@ const message = await walletClient.signMessage({
 Data to sign.
 
 ```ts
-const message = await walletClient.signMessage({
+const signature = await walletClient.signMessage({
   from: '0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266',
   data: '0xdeadbeaf', // [!code focus:1]
 })
